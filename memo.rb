@@ -19,12 +19,12 @@ if memo_type == "1"
 elsif memo_type == "2" 
     puts "---以下のメモが存在します---"
     Dir.foreach(".") do |item|
-        # next if item == "." or item == ".."
         if item == ".DS_Store" or item == "memo.rb" or item == ".git"
         else
             puts "・#{item}"
         end
-      end
+    end
+    
     puts "---内容を追加したいメモを選択し、名前(拡張子を除く)を入力してください---"
     select_file_title = gets.chomp
 
